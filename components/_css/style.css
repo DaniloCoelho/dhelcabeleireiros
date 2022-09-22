@@ -1,0 +1,341 @@
+body {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-family: poppinsregular;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+
+}
+nav{
+    margin: 0px;
+    
+}
+
+#title {
+    flex-direction: column;
+    line-height: 5px;
+    width: 700px;
+}
+.title1{
+    width: 100%;
+}
+ul{
+    width: 500px;
+    
+
+}
+
+li {
+    display: inline-block;
+    margin: 5px;
+
+}
+
+a {
+    color: white;
+
+}
+
+a:hover {
+    color: rgb(132, 14, 201);
+    transition: 0.3s all;
+}
+
+#inscreva-se-btn {
+    border: 2px solid rgb(132, 14, 201);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#inscreva-se-btn:hover {
+    background-color: rgb(132, 14, 201);
+    color: white;
+}
+marquee {
+    font-size:16px ;
+}
+h1 {
+    font-weight: 200;
+    font-size: 45px;
+    font-family: poppinsmedium;
+
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    
+}
+
+h2 {
+
+    font-size: 30px;
+    line-height: 40px;
+    font-family: poppinsmedium;
+}
+
+h3 {
+    font-size: 28px;
+
+}
+
+h4 {
+    font-size: 20px;
+}
+
+span {
+    color: rgb(132, 14, 201);
+    text-align: center;
+}
+
+p {
+    margin-top: 5px;
+    font-size: 12pt;
+    line-height: 20px;
+    max-width: 500px;
+
+}
+
+p:hover {
+    font-family:poppinsmedium;
+    font-size:20px
+}
+
+img {
+    width: 580px;
+
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+
+}
+
+
+form [type="submit"] {
+    height: 50px;
+    width: 50%;
+    margin-left: 90px;
+    background-color: rgb(132, 14, 201);
+    color: white;
+    font-weight: bold;
+
+}
+
+form [type="submit"]:hover {
+    cursor: pointer;
+
+
+}
+
+input {
+    margin-top: 15px;
+    height: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+}
+
+article {
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 800px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+}
+
+#moldura {
+    width:100%;
+    height: 450px;
+    background-color: #eeeeee;
+    transition: background-image 2s;
+}
+     
+        
+        
+
+    
+@font-face {
+    font-family: 'poppinsblack';
+    src: url('../components/fonts/poppins-black-webfont.woff2') format('woff2'),
+         url('../components/fonts/poppins-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @font-face {
+    font-family: 'poppinsbold';
+    src: url('../components/fonts/poppins-bold-webfont.woff2') format('woff2'),
+         url('../components/fonts/poppins-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+
+  @font-face {
+    font-family: 'poppinslight';
+    src: url('../components/fonts/poppins-light-webfont.woff2') format('woff2'),
+         url('../components/fonts/poppins-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+
+  @font-face {
+    font-family: 'poppinsmedium';
+    src: url('../components/fonts/poppins-medium-webfont.woff2') format('woff2'),
+         url('../components/fonts/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @font-face {
+    font-family: 'poppinsregular';
+    src: url('../components/fonts/poppins-regular-webfont.woff2') format('woff2'),
+         url('../components/fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @font-face {
+    font-family: 'poppinssemibold';
+    src: url('../components/fonts/poppins-semibold-webfont.woff2') format('woff2'),
+         url('../components/fonts/poppins-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+@media(max-width: 600px){
+    aside {
+        display:block;
+        flex-direction:center;
+        justify-content: center;
+        margin-left:5px;
+        padding: 0px;
+        width: 100%; 
+        margin-top: 20px;
+    }
+    #moldura {
+        width:100%;
+        height: 300px;
+        background-color: #eeeeee;
+        transition: background-image 2s;
+    }
+    img {
+        width: 100%;
+    
+    }
+    article {
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 100%;
+        height: auto;
+    }
+    main {
+        display: block;
+        flex-direction: none;
+        margin-top: 10px;
+    }
+    header {
+
+        display:block;
+        flex-direction:none;
+        justify-content:center;
+        align-items:center;
+        padding-inline-start: 0px;
+    }
+    
+    #title {
+        display: inline-flex;
+        flex-direction: initial;
+        width: 100%;
+    }
+    h1 {
+        font-weight: 200;
+        font-size: 30px;
+        font-family: poppinsmedium;
+    
+    }
+    h2 {
+
+        font-size: 12px;
+        line-height: 10px;
+        font-family: poppinsmedium;
+    }
+    h3 {
+        font-size: 13px;
+        margin-top:13%;
+    
+    }
+    ul{
+        margin-left: -40px;
+    }
+    body {
+        background-color: rgb(34, 34, 34);
+        color: white;
+        font-family: poppinsregular;
+        max-width: 100%;
+        margin: 0;
+        padding: 0px;
+    }
+    
+    
+    .title1{
+        width:48%;
+        height: 50px;
+        margin-left: 7px;
+    }
+    nav {
+        font-size: 12px;
+        margin: 0px;
+        margin-left: 0px;
+        
+        
+    }
+    marquee {
+        font-size:10px ;
+    }
+    p {
+        font-size: 11px;
+    }
+
+
+
+
+
+}
+   

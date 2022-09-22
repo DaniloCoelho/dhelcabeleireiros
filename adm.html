@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   
+      
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="components/_css/style.css">
+   
+            
+     
+     <script language=javascript>
+            function preload() {
+            imgs = Array('f1.jpg', 'f2.jpg', 'f3.jpg');
+            imgQtde = imgs.length;
+            for (i = 0; i < imgQtde; i++) {
+                var preloadimg = new Image();
+                preloadimg.src = imgs[i];
+            }
+        }
+        
+        function iniciaSlider() {
+            preload();
+            max = 3;
+            min = 1;
+            fi = min;
+            tr = true;
+            carregaFoto("components/images/f1.jpg");
+            document.getElementById("moldura").addEventListener("transitionend", fimTr);
+            tmr = setInterval(trocaFoto, 3000);
+        }
+        
+        function trocaFoto() {
+            tr = false;
+            fi++;
+            if (fi > max) {
+                fi = min;
+            }
+            carregaFoto("components/images/f" + fi + ".jpg");
+        }
+        
+        
+        function carregaFoto(foto) {
+            document.getElementById("moldura").style.backgroundImage = "URL(" + foto + ")";
+        }
+        
+        function fimTr() {
+            tr = true;
+        }
+        
+        function troca(dr) {
+            if (tr) {
+                tr = false;
+                fi += dr;
+                if (fi > max) {
+                    fi = min;
+                }
+                if (fi < min) {
+                    fi = max;
+                }
+                carregaFoto("components/images/f" + fi + ".jpg");
+            }
+            tmr = setInterval(trocaFoto, 3000);
+        }
+        
+    </script>
+            
+           
+
+
+         
+</head>
+
+
+
+
+
+    <header>
+       
+        <div id="title">
+            <h1>DHEL</h1>
+            <h3>Cabeleireiros Unissex</h3>
+        </div>
+
+        <ul>
+            <a href="index.html"><li>Início</li></a>
+            <a href="http://localhost/dhel/consultacad.php" target="_blank" id="inscreva-se-btn"><li>Clientes Cadastrados</li></a>
+            <a href="http://localhost/dhel/consultas.php" target="_blank" id="inscreva-se-btn"><li>Horários Agendados</li></a>
+        </ul>
+    </header>
+    
+    <strong><marquee>Somos profissionais da área de beleza e estética. Atuamos no ramo desde 2005, proporcionando aos nossos
+        clientes um serviço de altíssima
+        qualidade com um ótimo custo beneficio.</marquee></strong>
+    <main>
+        
+        <aside>
+            
+             <h2><span>Nossa missão:</span></h2>
+            <p>Oferecer tratamentos de beleza de alta qualidade, feitos por profissionais altamente treinados e qualificados, em constante melhoria.</p>
+
+            <h2><span> Pilares do nosso estabelecimento:</span></h2>
+            <p> Respeito, honestidade, transparência e compromisso com o bem estar</p>
+
+        </aside>
+
+       <body onload="iniciaSlider()">
+
+        <article class="switch" id="moldura" onclick="troca(1)"</aricle>
+
+    </main>
+
+    <footer>
+        <br><strong>Endereço:</strong><br>Rua Santa Cruz do monte Castelo, 12 B - Jardim Paraná - São Paulo<br>Tel.
+        98546-3550 / 98332-1977<br>&copy; Copyright 2021 HTML.am
+    </footer>
+
+</body>
+
+</html>

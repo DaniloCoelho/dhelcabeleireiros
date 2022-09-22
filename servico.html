@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="components/_css/style.css">
+    <script language="javascript">
+
+        function preload() {
+        imgs = Array('f1.jpg', 'f2.jpg', 'f3.jpg');
+        imgQtde = imgs.length;
+        for (i = 0; i < imgQtde; i++) {
+            var preloadimg = new Image();
+            preloadimg.src = imgs[i];
+        }
+    }
+    
+    function iniciaSlider() {
+        preload();
+        max = 3;
+        min = 1;
+        fi = min;
+        tr = true;
+        carregaFoto("components/images/f1.jpg");
+        document.getElementById("moldura").addEventListener("transitionend", fimTr);
+        tmr = setInterval(trocaFoto, 3000);
+    }
+    
+    function trocaFoto() {
+        tr = false;
+        fi++;
+        if (fi > max) {
+            fi = min;
+        }
+        carregaFoto("components/images/f" + fi + ".jpg");
+    }
+    
+    
+    function carregaFoto(foto) {
+        document.getElementById("moldura").style.backgroundImage = "URL(" + foto + ")";
+    }
+    
+    function fimTr() {
+        tr = true;
+    }
+    
+    function troca(dr) {
+        if (tr) {
+            tr = false;
+            fi += dr;
+            if (fi > max) {
+                fi = min;
+            }
+            if (fi < min) {
+                fi = max;
+            }
+            carregaFoto("components/images/f" + fi + ".jpg");
+        }
+        tmr = setInterval(trocaFoto, 3000);
+    }
+    
+        </script>
+      
+    
+</head>
+
+
+<body>
+
+    <header>
+        <div id="title">
+            <h1>DHEL</h1>
+            <h3>Cabeleireiros Unissex</h3>
+        </div>
+
+        <ul>
+           <a href="index.html"><li>Início</li></a>
+            <a href="servico.html"><li>Serviços</li></a>
+
+
+            <a href="http://localhost/dhel/index.php" target="_blank" id="inscreva-se-btn"><li>Agendar um horário</li></a>
+            <a href="http://localhost/dhel/cadastro.php" target="_blank" id="inscreva-se-btn"><li>Cadastre-se</li></a>
+        </ul>
+    </header>
+    <strong><marquee>Serviços de altíssima
+        qualidade com um ótimo custo beneficio. Venha conferir!</marquee></strong>
+    <main>
+        
+        <aside>
+            <h2><span><a href="http://localhost/dhel/cadastro.php" target="_blank" id="inscreva-se-btn"><li>Cadastre-se</li></a>
+            </span> para receber as novidades do nosso salão</h2>
+            
+           
+                <h2><span><li>Tratamento Capilar</li><br></span></h2>
+                <h4><li><strong>Masculino:</strong></h4>
+                <p> Cortes adulto e infantil, Alisamento, Reflexo, Penteados, etc</li></p>
+                <h4><li>Feminino:</li></h4>
+                <p>Cortes adulto e infantil, Relaxamento, Luzes, Hidratação, calterização, escova progressiva, etc</p>
+                <h2><span><li>Manicure</li><br></span></h2>
+                <p>Experiência comprovada como Manicure;<br>
+
+Conhecimento especializado em técnicas básicas e avançadas para cuidar das unhas, incluindo francesinha, uso de aerógrafo e de gel;<br> 
+
+Conhecimento das tendências da estética;<br> 
+
+Conhecimento das normas de higiene e esterilização.</p>
+                <h2><span><li>Design de Sobrancelhas</li><br></span></h2>
+                <p>Design de sobrancelhas e Micropigmentadora com técnicas de embeleza mento do olhar;<br> Permanente de Cilios, coloração cilios e sobrancelhas;<br> Henna Depilação a Fio facial.</p>
+               
+                
+                
+       
+           
+        </aside>
+        
+        <body onload="iniciaSlider()">
+
+        <article class="switch" id="moldura" onclick="troca(1)"</aricle<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <figure>   
+           
+            <img src= "components/images/cartao5.jpg">
+          
+        </figure>         
+    </main>
+            
+
+        <footer>
+            
+             
+            <strong>Endereço:</strong><br>Rua Santa Cruz do monte Castelo, 12 B - Jardim Paraná - São Paulo<br>Tel.
+            98546-3550 / 98332-1977<br>&copy; Copyright 2021 HTML.am
+        </footer>
+    
+
+</body>
+<script src="script.js"></script>
+</html>
