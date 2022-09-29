@@ -6,69 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DHEL Cabeleireiros</title>
     <link rel="stylesheet" href="components/_css/style.css">
+    <link rel="stylesheet" href="menudropdown.css">
     <script language="javascript">
+        function preload() {
+    imgs = Array('f1.jpg', 'f2.jpg', 'f3.jpg');
+    imgQtde = imgs.length;
+    for (i = 0; i < imgQtde; i++) {
+        var preloadimg = new Image();
+        preloadimg.src = imgs[i];
+        preloadimg.classList = "moldura"
+    }
+}
 
-function preload() {
-        imgs = Array('f1.jpg', 'f2.jpg', 'f3.jpg');
-        imgQtde = imgs.length;
-        for (i = 0; i < imgQtde; i++) {
-            var preloadimg = new Image();
-            preloadimg.src = imgs[i];
-            preloadimg.classList = "moldura"
-        }
-    }
+function iniciaSlider() {
+    preload();
+    max = 3;
+    min = 1;
+    fi = min;
+    tr = true;
+    carregaFoto("components/images/f1.jpg");
+    document.getElementById("moldura").addEventListener("transitionend", fimTr);
+    tmr = setInterval(trocaFoto, 3000);
     
-    function iniciaSlider() {
-        preload();
-        max = 3;
-        min = 1;
+    
+}
+
+function trocaFoto() {
+    tr = false;
+    fi++;
+    if (fi > max) {
         fi = min;
-        tr = true;
-        carregaFoto("components/images/f1.jpg");
-        document.getElementById("moldura").addEventListener("transitionend", fimTr);
-        tmr = setInterval(trocaFoto, 3000);
-        
-        
     }
+    carregaFoto("components/images/f" + fi + ".jpg");
+}
+
+
+function carregaFoto(foto) {
     
-    function trocaFoto() {
+    document.getElementById("moldura").src = foto  ;
+    
+    
+}
+
+function fimTr() {
+    tr = true;
+}
+
+function troca(dr) {
+    if (tr) {
         tr = false;
-        fi++;
+        fi += dr;
         if (fi > max) {
             fi = min;
         }
+        if (fi < min) {
+            fi = max;
+        }
         carregaFoto("components/images/f" + fi + ".jpg");
     }
+    tmr = setInterval(trocaFoto, 3000);
+}
+
+
     
-    
-    function carregaFoto(foto) {
-        /*document.getElementById("moldura").style.backgroundImage = "URL(" + foto + ")" ;
-        document.getElementById("moldura").style.width = "100%"*/
-        document.getElementById("moldura").src = foto  ;
-        
-        
-    }
-    
-    function fimTr() {
-        tr = true;
-    }
-    
-    function troca(dr) {
-        if (tr) {
-            tr = false;
-            fi += dr;
-            if (fi > max) {
-                fi = min;
-            }
-            if (fi < min) {
-                fi = max;
-            }
-            carregaFoto("components/images/f" + fi + ".jpg");
-        }
-        tmr = setInterval(trocaFoto, 3000);
-    }
-    
-        </script>  
+    </script>  
 
 </head>
 
@@ -80,20 +81,69 @@ function preload() {
                 <h1>DHEL</h1>
             </div>
             <div class="title1">
-                <h3 >Cabeleireiros Unissex</h3>
+                <h3></h3>
             </div>
             
             
         </div>
+        <nav class="web">
+            <ul style="width: 500px;">
+                <li style="display: inline-block;
+                margin: 5px;">
+                    <a href="index.html" >Início</a>
+                </li>
+                <li style="display: inline-block;
+                margin: 5px;">
+                    <a href="servico.html" >Serviços</a>
+                </li>
+                <li style="display: inline-block;
+                margin: 5px;">
+                    <a href="http://localhost/dhel/index.php" target="_blank" id="inscreva-se-btn" >Agendar um horário</a>
+                </li>
+                <li style="display: inline-block;
+                margin: 5px;">
+                    <a href="http://localhost/dhel/cadastro.php" target="_blank" id="inscreva-se-btn" >Cadastre-se</a>
+                
+                </li>
+                
+                
+
+                
+                
+            </ul>
+        </nav>
+       
+        <nav class="mobile" style="z-index:10 ; clear: both;">
+                <input type="checkbox" name="radio-btn" class="radio">
+                <img src="components/images/menu.png" class="menu">
+                <img src="components/images/menu2.png" class="menuv" >
+                <a href="default.php" class="logo">Cabeleireiros Unissex</a>
+            
+            <ul class="ulprincipal">
+                <li class="liprincipal">
+                    <a href="index.html" class="dropcalculadoras">Início</a>
+                </li>
+                <li class="liprincipal">
+                    <a href="servico.html" class="dropcalculadoras">Serviços</a>
+                </li>   
+                <li class="liprincipal">
+                    <a href="http://localhost/dhel/index.php" target="_blank" class="dropcalculadoras">Agendar um horário</a> 
+                </li>
+                <li class="liprincipal">
+                    <a href="http://localhost/dhel/cadastro.php" target="_blank"  class="dropcalculadoras">Cadastre-se</a>
+                </li>
+            </ul>
+
+        </nav>
         <nav>
             <ul>
 
-                <a href="index.html"><li>Início</li></a>
-                <a href="servico.html"><li>Serviços</li></a>
+                
+                
 
 
-                <a href="http://localhost/dhel/index.php" target="_blank" id="inscreva-se-btn"><li>Agendar um horário</li></a>
-                <a href="http://localhost/dhel/cadastro.php" target="_blank" id="inscreva-se-btn"><li>Cadastre-se</li></a>
+                
+                
                 
             </ul>
         </nav>
@@ -135,7 +185,7 @@ function preload() {
         98546-3550 / 98332-1977<br>&copy; Copyright 2021 HTML.am<br><a href="adm.html">Administrador</a>
         
     </footer>
-
+    <script src="funcoes.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,6 @@ body {
     padding: 10px;
 }
 header {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,19 +38,15 @@ nav{
 }
 ul{
     width: 500px;
-    
-
 }
 
 li {
     display: inline-block;
-    margin: 5px;
-
+    margin: 0px;
 }
 
 a {
     color: white;
-
 }
 
 a:hover {
@@ -302,7 +297,7 @@ footer {
     
     }
     ul{
-        margin-left: -40px;
+        margin-left: 0px;
     }
     body {
         background-color: rgb(34, 34, 34);
