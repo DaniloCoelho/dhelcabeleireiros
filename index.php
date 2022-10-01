@@ -12,8 +12,6 @@
 <body>
 		
     <div class="container">
-
-		
 			<section>
             <h1>Agendamento de Clientes</h1>
             <hr><br><br>
@@ -52,8 +50,6 @@
                     maxlength="255" required></textarea><br><br>
 
                 <input type="submit" value="Enviar" class="btn">
-
-
 
             </form>
         

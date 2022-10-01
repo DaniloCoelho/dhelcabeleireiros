@@ -6,71 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DHEL Cabeleireiros</title>
     <link rel="stylesheet" href="components/_css/style.css">
-    <link rel="stylesheet" href="menudropdown.css">
-    <script language="javascript">
-        function preload() {
-    imgs = Array('f1.jpg', 'f2.jpg', 'f3.jpg');
-    imgQtde = imgs.length;
-    for (i = 0; i < imgQtde; i++) {
-        var preloadimg = new Image();
-        preloadimg.src = imgs[i];
-        preloadimg.classList = "moldura"
-    }
-}
-
-function iniciaSlider() {
-    preload();
-    max = 3;
-    min = 1;
-    fi = min;
-    tr = true;
-    carregaFoto("components/images/f1.jpg");
-    document.getElementById("moldura").addEventListener("transitionend", fimTr);
-    tmr = setInterval(trocaFoto, 3000);
-    
-    
-}
-
-function trocaFoto() {
-    tr = false;
-    fi++;
-    if (fi > max) {
-        fi = min;
-    }
-    carregaFoto("components/images/f" + fi + ".jpg");
-}
-
-
-function carregaFoto(foto) {
-    
-    document.getElementById("moldura").src = foto  ;
-    
-    
-}
-
-function fimTr() {
-    tr = true;
-}
-
-function troca(dr) {
-    if (tr) {
-        tr = false;
-        fi += dr;
-        if (fi > max) {
-            fi = min;
-        }
-        if (fi < min) {
-            fi = max;
-        }
-        carregaFoto("components/images/f" + fi + ".jpg");
-    }
-    tmr = setInterval(trocaFoto, 3000);
-}
-
-
-    
-    </script>  
-
+    <link rel="stylesheet" href="menudropdown.css">  
 </head>
 
 <body>
@@ -83,8 +19,6 @@ function troca(dr) {
             <div class="title1">
                 <h3></h3>
             </div>
-            
-            
         </div>
         <nav class="web">
             <ul style="width: 500px;">
@@ -128,19 +62,6 @@ function troca(dr) {
                 <li class="liprincipal">
                     <a href="http://localhost/dhel/cadastro.php" target="_blank"  class="dropcalculadoras">Cadastre-se</a>
                 </li>
-            </ul>
-
-        </nav>
-        <nav>
-            <ul>
-
-                
-                
-
-
-                
-                
-                
             </ul>
         </nav>
     </header>
