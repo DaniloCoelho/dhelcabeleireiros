@@ -107,7 +107,7 @@ a:hover{
         display: none;
     }
     .mobile{
-        background-image: linear-gradient( rgb(0, 0, 0) , rgb(183, 0, 255));
+        background-image: linear-gradient( rgb(0, 0, 0) , rgb(76, 1, 105));
         text-align: left;
         box-shadow: 0px 0px 0px 0px rgb(157, 157, 197) ;
         border-radius: 2px;
@@ -115,9 +115,9 @@ a:hover{
         margin-right: 0px;
         width:100%;
         display:block;
-        height: 40px;
+        height: 30px;
         padding-top: 10px;
-        
+        margin-top: 0px;
     }
     .logo{
         list-style: none;
@@ -197,11 +197,10 @@ a:hover{
         line-height: 15px;
         list-style: none;
         width: 100%;
-        margin-top: 0px;
-        
+        margin-top: 0px; 
     }
     .dropcalculadoras{
-        background-image: linear-gradient( rgb(0, 0, 0) , rgb(183, 0, 255));
+        background-image: linear-gradient( rgb(0, 0, 0) , rgb(76, 1, 100));
         text-align: center;
         margin: 0px;
         position: relative;

@@ -250,6 +250,10 @@ footer {
         background-color: #eeeeee;
         transition: background-image 2s;
     }
+    #logo{
+        margin-top: 20px;
+        padding: 0px;
+    }
     img {
         width: 100%;
     
@@ -266,7 +270,6 @@ footer {
         margin-top: 10px;
     }
     header {
-
         display:block;
         flex-direction:none;
         justify-content:center;
@@ -278,6 +281,7 @@ footer {
         display: inline-flex;
         flex-direction: initial;
         width: 100%;
+        text-align: center;
     }
     h1 {
         font-weight: 200;
@@ -307,25 +311,27 @@ footer {
         margin: 0;
         padding: 0px;
     }
-    
-    
+    h3{
+        display:none
+    }
     .title1{
-        width:48%;
-        height: 50px;
-        margin-left: 7px;
+        width:99%;
+        height: 40px;
+        display: block;
     }
     nav {
         font-size: 12px;
         margin: 0px;
         margin-left: 0px;
-        
-        
     }
     marquee {
         font-size:10px ;
     }
     p {
         font-size: 11px;
+    }
+    footer{
+        font-size: 12px;
     }
 
 
